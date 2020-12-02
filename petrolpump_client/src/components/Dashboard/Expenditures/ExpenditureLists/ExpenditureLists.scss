@@ -1,0 +1,114 @@
+.expenditure {
+  width: 100%;
+  max-width: 60rem;
+  padding: 5px 1.5rem;
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #aed6d6;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+
+    position: relative;
+    transition: all 0.4s ease-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 2rem;
+
+      background: {
+        image: url('../../../../assets/images/arrow-down-mint.svg');
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+      }
+      transition: all 0.4s ease-out;
+    }
+
+    &__details {
+      opacity: 0;
+      max-height: 0;
+      overflow-y: hidden;
+      width: 100%;
+      max-width: 60rem;
+      transition: max-height 0.4s step-start opacity 0.1s ease-out;
+
+      &-items {
+        padding: 1.5rem 3rem;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        span {
+          font-size: 1.4rem;
+        }
+      }
+
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    &__form-submission {
+      opacity: 0;
+      max-height: 0;
+      overflow-y: hidden;
+      width: 100%;
+      // max-width: 70rem;
+      transition: max-height 0.4s step-start opacity 0.1s ease-out;
+    }
+
+    &__add-symbol {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    &__particular {
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    &__total-expense {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.expenditure.open .expenditure-list {
+  margin-bottom: 1rem;
+}
+
+.expenditure.open .expenditure-list::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.expenditure.open .expenditure-list__details {
+  max-height: 120rem;
+  opacity: 1;
+}
+
+.expenditure.open-submission .expenditure-list {
+  margin-bottom: 1rem;
+}
+
+.expenditure.open-submission .expenditure-list::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.expenditure.open-submission .expenditure-list__form-submission {
+  max-height: 120rem;
+  opacity: 1;
+}

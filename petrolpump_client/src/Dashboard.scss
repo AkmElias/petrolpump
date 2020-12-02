@@ -1,0 +1,60 @@
+.dashboard {
+  .dashboard-header {
+    background-color: #aed6d6;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .dashboard-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (min-width: 600px) {
+      .nav-control {
+        display: none;
+      }
+    }
+
+    &-left {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-right: 1.6rem;
+
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .dashboard-bottom-part {
+    background-color: #eaf4f4;
+    .dashboard-bottom-content {
+      display: flex;
+      justify-content: space-between;
+
+      .main-content {
+        width: 80%;
+        padding: 1rem;
+
+        @media only screen and (max-width: 600px) {
+          width: 65%;
+        }
+      }
+    }
+  }
+}

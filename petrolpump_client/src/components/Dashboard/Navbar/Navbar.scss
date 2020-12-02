@@ -1,0 +1,85 @@
+.navbar {
+  width: 20%;
+  min-height: 100vh;
+  background-color: #ddf1f1;
+  margin-top: -2rem;
+  margin-right: 1rem;
+  font-family: SolaimanLipi, sans-serif;
+
+  @media only screen and (max-width: 600px) {
+    width: 35%;
+    margin-left: -2rem;
+    // transform: translateX(-100%);
+  }
+
+  ul,
+  li,
+  label,
+  a {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+  }
+
+  ul {
+    label {
+      height: 5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      height: 5rem;
+      overflow: hidden;
+      display: block;
+      transition: all 0.2s ease-in;
+    }
+  }
+
+  label {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(#ddf1f1, #d5ebeb);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3.5rem;
+    color: inherit;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 1.1em;
+    }
+
+    &:hover {
+      background-color: #aed6d6;
+    }
+  }
+
+  .active {
+    background-color: #aed6d6;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+#machines:checked + li,
+#daily_logs:checked + li,
+#customers:checked + li,
+#expenditures:checked + li,
+#products:checked + li {
+  height: auto;
+  transition: all 0.2s ease-in;
+}

@@ -1,0 +1,34 @@
+.expenditure-form {
+  padding: 1.5rem 0;
+  // margin: 1.5rem 0;
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .form-input {
+    .universal_form-input {
+      margin-top: 1.5rem;
+
+      input,
+      select {
+        width: 22rem;
+      }
+
+      input[type='date'] {
+        padding: 2rem;
+        margin: 0;
+      }
+    }
+  }
+
+  .expenditure-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__line-break {
+      width: 100%;
+    }
+  }
+}

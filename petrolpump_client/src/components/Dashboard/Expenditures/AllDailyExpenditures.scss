@@ -1,0 +1,76 @@
+.all-daily-expenditures {
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+
+    span {
+      font-weight: normal;
+    }
+  }
+
+  .download-button {
+    background-color: #4f9191;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    color: #fff;
+    width: inherit;
+    padding: 1rem 1.5rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 8rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+      background-color: #85c5c5;
+    }
+  }
+
+  .table-data {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1.2rem;
+
+    th {
+      position: sticky;
+      z-index: 99;
+      top: 0;
+      text-align: left;
+      background-color: #4caf50;
+      color: white;
+    }
+
+    tbody tr td:first-child {
+      position: sticky;
+      background-color: #4caf50;
+      color: #fff;
+      left: 0;
+    }
+
+    td,
+    th {
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fff;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+  }
+}
